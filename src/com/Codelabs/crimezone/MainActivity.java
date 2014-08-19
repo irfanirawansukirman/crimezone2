@@ -1,19 +1,24 @@
 package com.Codelabs.crimezone;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.Button;
 import android.widget.ViewFlipper;
 
 public class MainActivity extends Activity {
 
 	private ViewFlipper vf;
 	private float oldTouchValue;
+	private Button btnStart;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +26,21 @@ public class MainActivity extends Activity {
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.test);
 		vf = (ViewFlipper) findViewById(R.id.ViewFlipper01);
+
+		btnStart = (Button) findViewById(R.id.btn_home_getStarted);
+		btnStart.setOnClickListener(start);
+
 	}
+
+	OnClickListener start = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			Intent inten = new Intent(MainActivity.this, Timeline.class);
+			startActivity(inten);
+		}
+	};
 
 	@Override
 	public boolean onTouchEvent(MotionEvent touchevent) {
