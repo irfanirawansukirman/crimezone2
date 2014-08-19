@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1C40F" >
+
+    <LinearLayout
+        android:id="@+id/lin_getStarted3_txtJudul"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtView_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="75dp"
+            android:gravity="center"
+            android:text="FEATURES"
+            android:textColor="#ffffff"
+            android:textSize="12pt"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/lin_imgView_getStarted3"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center|right"
+                android:layout_marginLeft="100dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_bell" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05"
+                android:text="ddd"
+                android:textColor="#F1C40F"
+                android:textSize="8pt" />
+
+            <ImageView
+                android:id="@+id/imgView2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_marginRight="100dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_image" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_getStarted3_txtJudul2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin_getStarted3_txtJudul"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtView_reportText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="YOU CAN UPLOAD AN IMAGE EVERY CRIME. YOU REPORT OTHERWISE IT CAN BE NOTIFICATION WHEN WITHN A RADIUS 1 KM THE CRITICAL POINTS OF THE CRIME NEARBY"
+            android:textColor="#ffffff"
+            android:textSize="5pt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_dotIndicator"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_yellow_dot" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_yellow_dot" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_white_dot" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_yellow_dot" />
+    </LinearLayout>
+
+</RelativeLayout>

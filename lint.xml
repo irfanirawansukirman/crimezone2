@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ContentDescription">
+        <ignore path="res/layout/activity_main.xml" />
+        <ignore path="res/layout/getstarted_2.xml" />
+        <ignore path="res/layout/getstarted_3.xml" />
+        <ignore path="res/layout/getstarted_4.xml" />
+        <ignore path="res/layout/home.xml" />
+    </issue>
+    <issue id="DuplicateIds">
+        <ignore path="res/layout/getstarted_2.xml" />
+    </issue>
+    <issue id="HardcodedText">
+        <ignore path="res/layout/activity_main.xml" />
+        <ignore path="res/layout/getstarted_2.xml" />
+        <ignore path="res/layout/getstarted_3.xml" />
+        <ignore path="res/layout/getstarted_4.xml" />
+        <ignore path="res/layout/home.xml" />
+    </issue>
+    <issue id="InefficientWeight">
+        <ignore path="res/layout/activity_main.xml" />
+    </issue>
+    <issue id="MangledCRLF">
+        <ignore path="res/layout/getstarted_2.xml" />
+    </issue>
+    <issue id="NotSibling">
+        <ignore path="res/layout/getstarted_2.xml" />
+    </issue>
+    <issue id="UselessParent">
+        <ignore path="res/layout/activity_main.xml" />
+        <ignore path="res/layout/getstarted_2.xml" />
+        <ignore path="res/layout/getstarted_3.xml" />
+        <ignore path="res/layout/test.xml" />
+    </issue>
+</lint>

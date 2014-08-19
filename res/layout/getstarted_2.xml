@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1C40F" >
+
+    <LinearLayout
+        android:id="@+id/lin_getStarted2_txtJudul"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtView_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="75dp"
+            android:gravity="center"
+            android:text="REPORT"
+            android:textColor="#ffffff"
+            android:textSize="12pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtView_reportText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="SIGN IN TO CRIMEZONE, END THEN POST POST"
+            android:textColor="#ffffff"
+            android:textSize="5pt" />
+
+        <TextView
+            android:id="@+id/txtView_reportText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="CRIME GOING AROUND YOU"
+            android:textColor="#ffffff"
+            android:textSize="5pt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_getStarted2_imgCrime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="268dp"
+            android:layout_height="184dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/ic_human" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_dotIndicator"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_yellow_dot" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_white_dot" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_yellow_dot" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_yellow_dot" />
+    </LinearLayout>
+    <!--
+          <com.kevintan.viewflipperindicator.UnderlinePageIndicator
+        android:id="@+id/viewFlipperIndicator"
+        style="@style/CustomUnderlinePageIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        />
+    -->
+
+</RelativeLayout>

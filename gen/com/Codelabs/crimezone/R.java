@@ -21,13 +21,50 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int effect_btn_facebook=0x7f020000;
+        public static final int effect_btn_get_started=0x7f020001;
+        public static final int ic_bell=0x7f020002;
+        public static final int ic_done=0x7f020003;
+        public static final int ic_facebook=0x7f020004;
+        public static final int ic_human=0x7f020005;
+        public static final int ic_image=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int ic_logo=0x7f020008;
+        public static final int ic_white_dot=0x7f020009;
+        public static final int ic_yellow_dot=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f080000;
+        public static final int ViewFlipper01=0x7f080014;
+        public static final int action_settings=0x7f080017;
+        public static final int btn_home_getStarted=0x7f08000e;
+        public static final int imgView=0x7f080008;
+        public static final int imgView2=0x7f080009;
+        public static final int imgView_home_logoGetStarted=0x7f08000c;
+        public static final int imgView_icFacebook=0x7f080011;
+        public static final int libraryView1=0x7f080016;
+        public static final int libraryView2=0x7f080015;
+        public static final int lin_btnFacebook=0x7f080010;
+        public static final int lin_dotIndicator=0x7f080005;
+        public static final int lin_getStarted2_imgCrime=0x7f080004;
+        public static final int lin_getStarted2_txtJudul=0x7f080000;
+        public static final int lin_getStarted3_txtJudul=0x7f080006;
+        public static final int lin_getStarted3_txtJudul2=0x7f08000a;
+        public static final int lin_home_btnStarted=0x7f08000d;
+        public static final int lin_home_logo=0x7f08000b;
+        public static final int lin_home_pemisahOr=0x7f08000f;
+        public static final int lin_imgView_getStarted3=0x7f080007;
+        public static final int txtView_faceBook=0x7f080013;
+        public static final int txtView_report=0x7f080001;
+        public static final int txtView_reportText1=0x7f080002;
+        public static final int txtView_reportText2=0x7f080003;
+        public static final int txtView_signIn=0x7f080012;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int getstarted_2=0x7f030000;
+        public static final int getstarted_3=0x7f030001;
+        public static final int getstarted_4=0x7f030002;
+        public static final int home=0x7f030003;
+        public static final int test=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f070000;
