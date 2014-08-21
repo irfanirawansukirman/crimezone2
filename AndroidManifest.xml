@@ -33,6 +33,14 @@
             android:name="com.Codelabs.crimezone.DetailTimeline"
             android:label="Detail Timeline" >
         </activity>
+        <activity
+            android:name="com.Codelabs.crimezone.LaporanKegiatanPolisi"
+            android:label="@string/title_activity_laporan_kegiatan_polisi" >
+        </activity>
+        <activity
+            android:name="com.Codelabs.crimezone.DetailKegiatan"
+            android:label="@string/title_activity_detail_kegiatan" >
+        </activity>
     </application>
 
 </manifest>

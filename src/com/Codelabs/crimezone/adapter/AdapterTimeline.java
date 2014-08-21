@@ -22,6 +22,7 @@ import android.widget.TextView;
 public class AdapterTimeline extends BaseAdapter {
 
 	ImageView img;
+	String idPetugas, idPengguna;
 
 	private ArrayList<ModelLaporanKejahatan.Item> _data;
 	Context _context;
@@ -56,6 +57,7 @@ public class AdapterTimeline extends BaseAdapter {
 		}
 
 		img = (ImageView) v.findViewById(R.id.img_timeline);
+		TextView userPost = (TextView) v.findViewById(R.id.txt_user_timeline);
 		TextView titleLaporan = (TextView) v
 				.findViewById(R.id.txt_title_timeline);
 		TextView tagPost = (TextView) v.findViewById(R.id.txt_tag_timeline);
@@ -64,10 +66,21 @@ public class AdapterTimeline extends BaseAdapter {
 		TextView alamatKejadian = (TextView) v
 				.findViewById(R.id.txt_address_post_timeline);
 
+		idPetugas = _data.get(position).getId_petugas();
+		idPengguna = _data.get(position).getId_pengguna();
+
 		titleLaporan.setText(_data.get(position).getJudul_laporan_kegiatan());
-		tagPost.setText("#" + _data.get(position).getNama_jenis_kejahatan());
+		tagPost.setText("#"
+				+ _data.get(position).getNama_jenis_kejahatan().toLowerCase());
 		tglPost.setText(_data.get(position).getTanggal_kejadian());
 		alamatKejadian.setText(_data.get(position).getAlamat_kejahatan());
+
+		if (idPetugas != null) {
+			userPost.setText("Kepolisian Kota Bandung");
+		} else if (idPengguna != null) {
+			userPost.setText(_data.get(position).getNama_pengguna());
+		}
+
 		String imgUrl = (ApiReferences.getUrlImage() + _data.get(position)
 				.getFoto_kejahatan()).replaceAll(" ", "%20");
 		ImageLoader imgLoader = VolleySingleton.getInstance(_context)

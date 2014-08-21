@@ -1,111 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="#efefef" >
 
     <RelativeLayout
-        android:id="@+id/rel_usr_tgl_alamat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_item_list_timeline"
+        android:padding="1dp" >
 
         <RelativeLayout
-            android:id="@+id/rel_ava_usr"
+            android:id="@+id/rel_usr_tgl_alamat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp" >
+            android:layout_alignParentTop="true" >
 
-            <ImageView
-                android:id="@+id/img_ava_timeline"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_avatar" />
-
-            <TextView
-                android:id="@+id/txt_user_timeline"
+            <RelativeLayout
+                android:id="@+id/rel_ava_usr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@id/img_ava_timeline"
-                android:text="Dummy"
-                android:textSize="16sp" />
-        </RelativeLayout>
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp" >
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/rel_ava_usr"
-            android:paddingRight="20dp" >
+                <ImageView
+                    android:id="@+id/img_ava_timeline"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_avatar" />
+
+                <TextView
+                    android:id="@+id/txt_user_timeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/img_ava_timeline"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_timeline_alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_ava_usr"
+                android:paddingBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/txt_address_post_timeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:text="Disini Alamat Kejahatannya"
+                    android:textColor="#ababab"
+                    android:textSize="12sp" />
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/txt_tgl_post_timeline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_above="@id/rel_timeline_alamat"
                 android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
                 android:text="Tanggal"
                 android:textColor="#ababab"
                 android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/txt_address_post_timeline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/txt_tgl_post_timeline"
-                android:text="Disini Alamat Kejahatannya"
-                android:textColor="#ababab"
-                android:textSize="12sp" />
         </RelativeLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/rel_usr_tgl_alamat" >
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ImageView
-                android:id="@+id/img_timeline"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_image_logo" />
-
-            <TextView
-                android:id="@+id/txt_tag_timeline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="15dp"
-                android:background="#80000000"
-                android:padding="4dp"
-                android:text="#tag here" />
-        </FrameLayout>
 
         <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="#80000000"
-            android:paddingBottom="15dp"
-            android:paddingLeft="25dp"
-            android:paddingTop="15dp" >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rel_usr_tgl_alamat" >
 
-            <TextView
-                android:id="@+id/txt_title_timeline"
-                android:layout_width="wrap_content"
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/img_timeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/txt_tag_timeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_tag_timeline"
+                    android:padding="3dp"
+                    android:text="#tag here" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Judul Kejadian"
-                android:textSize="16sp" />
+                android:layout_alignParentBottom="true"
+                android:background="#70000000"
+                android:paddingBottom="15dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/txt_title_timeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Judul Kejadian"
+                    android:textSize="16sp" />
+            </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
 

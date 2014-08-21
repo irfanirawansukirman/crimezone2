@@ -6,22 +6,14 @@
     tools:context=".MainActivity" >
 
     <include
-        android:id="@+id/header_timeline"
+        android:id="@+id/header_kegiatan_polisi"
         layout="@layout/header" />
 
     <ListView
-        android:id="@+id/list_timeline"
+        android:id="@+id/list_kegiatan_polisi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/header_timeline"
-        android:divider="@null" >
+        android:layout_below="@id/header_kegiatan_polisi" >
     </ListView>
-
-    <Button
-        android:id="@+id/btn_report_kepolisian"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:text="Laporan Kepolisian" />
 
 </RelativeLayout>

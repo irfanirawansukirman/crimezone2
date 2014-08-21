@@ -21,7 +21,9 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
+import android.view.Display;
 import android.view.Menu;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,10 +34,12 @@ public class DetailTimeline extends Activity {
 	ModelLaporanKejahatan model;
 	RequestQueue mRequestQueue;
 	ArrayList<ModelLaporanKejahatan.Item> array;
-	String id_laporan_kejahatan, judul, desc, imgUrl;
-	TextView txtJudul, txtDesc;
-	ImageView img;
+	String id_laporan_kejahatan, judul, tag, tgl, alamat, desc, user,
+			idPetugas, idPengguna, imgUrl;
+	TextView txtJudul, txtDesc, txtUser, txtTag, txtTgl, txtAlamat;
+	ImageView imgKejahatan;
 	ImageLoader imgLoader;
+	int width;
 
 	NetworkChecking ch;
 	Boolean checking;
@@ -43,13 +47,17 @@ public class DetailTimeline extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.detail_timeline);
+
+		Display display = getWindowManager().getDefaultDisplay();
+		width = display.getWidth();
 
 		context = getApplicationContext();
 
 		declareView();
 		initData();
-		Toast.makeText(context, id_laporan_kejahatan, Toast.LENGTH_LONG);
+		imgKejahatan.getLayoutParams().width = width;
 
 		ch = new NetworkChecking(context);
 		checking = null;
@@ -102,7 +110,19 @@ public class DetailTimeline extends Activity {
 
 	private void setData() {
 		judul = array.get(0).getJudul_laporan_kegiatan();
+		tag = array.get(0).getNama_jenis_kejahatan();
 		desc = array.get(0).getDeskripsi_laporan_kegiatan();
+		tgl = array.get(0).getTanggal_kejadian();
+		alamat = array.get(0).getAlamat_kejahatan();
+		idPetugas = array.get(0).getId_petugas();
+		idPengguna = array.get(0).getId_pengguna();
+
+		if (idPetugas != null) {
+			user = "Kepolisian Kota Bandung";
+		} else if (idPengguna != null) {
+			user = array.get(0).getNama_pengguna();
+		}
+
 		imgUrl = (ApiReferences.getUrlImage() + array.get(0)
 				.getFoto_kejahatan()).replaceAll(" ", "%20");
 
@@ -112,26 +132,34 @@ public class DetailTimeline extends Activity {
 			@Override
 			public void onErrorResponse(VolleyError error) {
 
-				img.setImageResource(R.drawable.ic_launcher);
+				imgKejahatan.setImageResource(R.drawable.ic_launcher);
 			}
 
 			@Override
 			public void onResponse(ImageContainer response, boolean arg1) {
 
 				if (response.getBitmap() != null) {
-					img.setImageBitmap(response.getBitmap());
+					imgKejahatan.setImageBitmap(response.getBitmap());
 				}
 			}
 		});
 
 		txtJudul.setText(judul);
+		txtTag.setText("#" + tag.toLowerCase());
 		txtDesc.setText(desc);
+		txtUser.setText(user);
+		txtTgl.setText(tgl);
+		txtAlamat.setText(alamat);
 	}
 
 	public void declareView() {
-		txtJudul = (TextView) findViewById(R.id.judul);
-		txtDesc = (TextView) findViewById(R.id.desc);
-		img = (ImageView) findViewById(R.id.img_detail);
+		txtJudul = (TextView) findViewById(R.id.txt_detail_judul);
+		txtDesc = (TextView) findViewById(R.id.txt_detail_desc);
+		txtTag = (TextView) findViewById(R.id.txt_detail_tag);
+		txtUser = (TextView) findViewById(R.id.txt_detail_user);
+		txtTgl = (TextView) findViewById(R.id.txt_detail_tgl);
+		txtAlamat = (TextView) findViewById(R.id.txt_detail_alamat);
+		imgKejahatan = (ImageView) findViewById(R.id.img_detail_foto_kejahatan);
 	}
 
 	@Override

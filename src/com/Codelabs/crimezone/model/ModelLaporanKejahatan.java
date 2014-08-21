@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class ModelLaporanKejahatan {
 
-	String result;
-	ArrayList<Item> item;
+	private String result;
+	private ArrayList<Item> item;
 
 	public String getResult() {
 		return result;

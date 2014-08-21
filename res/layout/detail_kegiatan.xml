@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailKegiatan" >
+
+    <include
+        android:id="@+id/header_detail_Krgiatan"
+        layout="@layout/header" />
+
+    <ImageView
+        android:id="@+id/img_detail_kegiatan"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter" />
+
+    <RelativeLayout
+        android:id="@+id/rel_detail_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/img_detail_kegiatan_ava"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_police_car_ava" />
+
+                        <ImageView
+                            android:id="@+id/img_detail_kejahatan_place"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/img_detail_kegiatan_ava"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_marker_yellow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_detail_kegiatan_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp"
+                        android:paddingTop="16dp" >
+
+                        <TextView
+                            android:id="@+id/txt_detail_kegiatan_judul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Penyuluhan"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txt_detail_kegiatan_tgl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_detail_kegiatan_judul"
+                            android:text="TGL"
+                            android:textColor="#ababab"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/txt_detail_kegiatan_lokasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="LOKASI"
+                            android:textColor="#ababab"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ababab" />
+
+                <TextView
+                    android:id="@+id/txt_detail_kegiatan_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>
